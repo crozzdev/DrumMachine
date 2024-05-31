@@ -69,6 +69,7 @@ body {
   border-radius: 5px;
   padding-top: 35px;
   cursor: pointer;
+  -webkit-user-select: none;
   user-select: none;
   color: var(--white);
   background-color: var(--dark-purple);
@@ -162,7 +163,7 @@ body {
   transition: .4s;
 }
 
-.drum-controls-container .volume-slider {
+.drum-controls-container .volume-slider-container {
   margin-bottom: 20px;
   width: 100%;
 }
