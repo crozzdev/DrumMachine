@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DrumMachine VanillaApp</title>
+</head>
+
+<body>
+  <div id="drum-machine" class="drum-machine-container">
+    <div class="logo">
+      <div class="inner-logo ">CrozzDev&nbsp;</div><i class="inner-logo fa fa-fire"></i>
+    </div>
+    <div class="drum-pads-container">
+      <div class="drum-pad" id="Chord-1">
+        <audio src="https://s3.amazonaws.com/freecodecamp/drums/Chord_1.mp3" class="clip" id="Q"></audio>
+        Q
+      </div>
+      <div class="drum-pad" id="Chord-2">
+        <audio src="https://s3.amazonaws.com/freecodecamp/drums/Chord_2.mp3" class="clip" id="W"></audio>
+        W
+      </div>
+      <div class="drum-pad" id="Chord-3">
+        <audio src="https://s3.amazonaws.com/freecodecamp/drums/Chord_3.mp3" class="clip" id="E"></audio>
+        E
+      </div>
+      <div class="drum-pad" id="Shaker">
+        <audio src="https://s3.amazonaws.com/freecodecamp/drums/Give_us_a_light.mp3" class="clip" id="A"></audio>
+        A
+      </div>
+      <div class="drum-pad" id="Open-HH">
+        <audio src="https://s3.amazonaws.com/freecodecamp/drums/Dry_Ohh.mp3" class="clip" id="S"></audio>
+        S
+      </div>
+      <div class="drum-pad" id="Closed-HH">
+        <audio src="https://s3.amazonaws.com/freecodecamp/drums/Bld_H1.mp3" class="clip" id="D"></audio>
+        D
+      </div>
+      <div class="drum-pad" id="Punchy-Kick">
+        <audio src="https://s3.amazonaws.com/freecodecamp/drums/punchy_kick_1.mp3" class="clip" id="Z"></audio>
+        Z
+      </div>
+      <div class="drum-pad" id="Side-Stick">
+        <audio src="https://s3.amazonaws.com/freecodecamp/drums/side_stick_1.mp3" class="clip" id="X"></audio>
+        X
+      </div>
+      <div class="drum-pad" id="Snare">
+        <audio src="https://s3.amazonaws.com/freecodecamp/drums/Brk_Snr.mp3" class="clip" id="C"></audio>
+        C
+      </div>
+    </div>
+    <div class="drum-controls-container">
+      <label for="power-switch" class="switch">
+        <span class="label-text">Power</span>
+        <input id="power-switch" type="checkbox" checked>
+        <span class="slider"></span>
+      </label>
+      <div id="display" class="display-container">Volume: 50</div>
+      <div class="volume-slider">
+        <input type="range" max="1" min="0" step="0.01" value="0.5">
+      </div>
+      <label for="bank-switch" class="switch">
+        <span class="label-text">Bank</span>
+        <input id="bank-switch" type="checkbox" checked>
+        <span class="slider "></span>
+      </label>
+    </div>
+  </div>
+  <footer>Made with love by CrozzDev <i class="fa fa-heart"></i></footer>
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
