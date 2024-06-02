@@ -27,8 +27,8 @@ const Sounds = [
     },
     {
         id: "S",
-        sound: { title: "Clap", src: "https://cdn.freecodecamp.org/testable-projects-fcc/audio/Heater-6.mp3" },
-        soundBank: { title: "Open-HH", src: "https://s3.amazonaws.com/freecodecamp/drums/Dry_Ohh.mp3" }
+        sound: { title: "Open-HH", src: "https://cdn.freecodecamp.org/testable-projects-fcc/audio/Heater-6.mp3" },
+        soundBank: { title: "Clap", src: "https://s3.amazonaws.com/freecodecamp/drums/Dry_Ohh.mp3" }
     },
     {
         id: "D",
@@ -53,13 +53,16 @@ const Sounds = [
 
 ];
 
-
+const ids = Sounds.map(sound => sound.id)
+const drumPadsArray = Array.from($drumPads)
 const drumPadsLength = $drumPads.length
 
 // Define the event listener function
 const playAudio = function () {
+    $display.innerText = this.id
     const audio = this.firstElementChild;
     audio.currentTime = 0;
+    audio.volume = $volumeSlider.value;
     audio.play();
 }
 
@@ -108,3 +111,15 @@ checkAndEnable()
 
 $powerToggle.addEventListener("change", checkAndEnable)
 $bankToggle.addEventListener("change", setSounds)
+$volumeSlider.addEventListener("input", () => {
+    $display.innerText = `Volume: ${Math.floor(parseFloat($volumeSlider.value) * 100)}`
+})
+window.addEventListener("keydown", ({ key }) => {
+    const upperKey = key.toUpperCase();
+    if (ids.includes(upperKey)) {
+        const $drumPad = drumPadsArray.find(element => element.innerText === upperKey);
+        if ($drumPad) {
+            playAudio.call($drumPad);
+        }
+    }
+});
