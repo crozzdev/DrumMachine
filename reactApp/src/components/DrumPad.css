@@ -1,0 +1,21 @@
+.drum-pad {
+
+    width: 100px;
+    height: 80px;
+    margin-right: 10px;
+    border-radius: 5px;
+    padding-top: 35px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    color: var(--white);
+    background-color: var(--dark-purple);
+    margin-top: 10px;
+    box-shadow: black 3px 3px 5px;
+    transition: transform 0.1s ease;
+}
+
+.drum-pad:active {
+    background-color: var(--bright-purple);
+    transform: scale(0.95);
+}

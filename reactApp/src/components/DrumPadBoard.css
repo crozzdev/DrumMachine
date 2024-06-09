@@ -1,0 +1,8 @@
+.drum-pads-container {
+    display: grid;
+    width: 332px;
+    height: 272px;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 20px;
+    margin-right: 40px;
+}
