@@ -23,6 +23,11 @@ Both are packaged using Vite. Be careful to each README inside. This project ful
 
 - User Story #7: When a .drum-pad is triggered, a string describing the associated audio clip is displayed as the inner text of the #display element (each string must be unique).
 
+## Prerequisites
+
+1. You have NodeJS installed (latest stable)
+2. You have basic knowledge about Vite. Otherwise, please check more info [here](https://vitejs.dev/guide/)
+
 ## Installation
 
 1. Clone the repository: `git clone https://github.com/your-username/drum-machine.git`
@@ -31,7 +36,12 @@ Both are packaged using Vite. Be careful to each README inside. This project ful
 
 ## Usage
 
-1. Start the development server: `npm run dev:react` this is because I was experimenting having both the vanilla and react version under the same project folder, this is why you will see two different vite configurations:
+1. Start the development server:
+
+  - For the react version: `npm run dev:react`
+  - For the vanilla version `npm run rev:vanilla`
+  
+This is because I was experimenting having both the vanilla and react version under the same project folder, this is why you will see two different vite configurations:
 
 - vite.config.js -> for the vanilla version
 - vite.react.config.js -> for the react version
