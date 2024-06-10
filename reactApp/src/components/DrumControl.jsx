@@ -1,15 +1,23 @@
+import { useEffect } from 'react'
 import './DrumControl.css'
 import { ToggleSwitch } from './ToggleSwitch'
 import { VolumeInput } from './VolumeInput'
 
-export const DrumControl = ({ setBank, setPower, volume }) => {
+export const DrumControl = ({ power, bank, setBank, setPower, volume, setVolume, displayMsg, setDisplayMsg }) => {
+    // useeffect for when the volumen changes is displayed for some seconds
+    useEffect(() => {
+        setDisplayMsg(`Volume: ${Math.floor(parseFloat(volume * 100))}`)
+        setTimeout(() => {
+            setDisplayMsg("")
+        }, 1500)
+    }, [volume])
 
     return (
         <div className="drum-controls-container">
-            <ToggleSwitch setState={setPower} label="Power" />
-            <div id="display" class="display-container">Volume: 50</div>
-            <VolumeInput volume={volume} />
-            <ToggleSwitch setState={setBank} label="Bank" />
+            <ToggleSwitch state={power} setState={setPower} label="Power" />
+            <div id="display" className="display-container">{displayMsg}</div>
+            <VolumeInput volume={volume} setVolume={setVolume} />
+            <ToggleSwitch state={bank} setState={setBank} label="Bank" />
         </div>
     )
 

@@ -2,7 +2,7 @@ import { DrumMachine } from "./components/DrumMachine.jsx"
 
 function App() {
     return (
-        <DrumMachine />
+        <DrumMachine id="drum-machine" />
     )
 }
 export default App
